@@ -52,14 +52,31 @@ After conversion, the root directory should contain ECG records in CSV format.
 
 Example:
 
+
 ```text
 root_dir/
 ├── patient_001/
-│   └── record_001.csv
+│   └── holter/
+│       ├── 1/
+│       │   └── record.csv
+│       ├── 2/
+│       │   └── record.csv
+│       └── 3/
+│           └── record.csv
 ├── patient_002/
-│   └── record_002.csv
+│   └── holter/
+│       └── 1/
+│           └── record.csv
 └── patient_003/
-    └── record_003.csv
+    └── holter/
+        ├── 1/
+        │   └── record.csv
+        └── 2/
+            └── record.csv
+
+
+Each patient folder may contain a `holter` directory with one or more recording folders such as `1`, `2`, or `3`. It is not necessary that all patients have all three recordings.
+
 ```
 
 ---
